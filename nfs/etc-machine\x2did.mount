@@ -1,0 +1,12 @@
+[Unit]
+Description = /etc/machine-id bind mount for RO setups
+ConditionPathExists = /etc/machine-id
+Before = dbus.service
+Wants = dbus-uuidgen.service
+After = dbus-uuidgen.service
+
+[Mount]
+What = /run/dbus-machine-id
+Where = /etc/machine-id
+Type = bind
+Options = bind

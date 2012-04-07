@@ -1,0 +1,9 @@
+[Unit]
+Description = /var/lib/connman directory for RO setups
+Before = connman.service
+
+[Mount]
+What = none
+Where = /var/lib/connman
+Type = tmpfs
+Options = size=128k

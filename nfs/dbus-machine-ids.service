@@ -1,0 +1,7 @@
+[Unit]
+Description = DBUS uuid generation helper for RO setups
+After = var-lib-dbus.mount
+
+[Service]
+Type = oneshot
+ExecStart = /bin/touch /var/lib/dbus/machine-id

@@ -1,0 +1,6 @@
+[Unit]
+Description = DBUS uuid generation for RO setups
+
+[Service]
+Type = oneshot
+ExecStart = /usr/bin/dbus-uuidgen --ensure=/run/dbus-machine-id

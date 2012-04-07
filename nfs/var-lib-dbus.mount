@@ -1,0 +1,9 @@
+[Unit]
+Description = /var/lib/dbus bind mount for RO setups
+Before = dbus.service
+
+[Mount]
+What = none
+Where = /var/lib/dbus
+Type = tmpfs
+Options = size=128k
