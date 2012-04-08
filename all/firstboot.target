@@ -1,0 +1,9 @@
+[Unit]
+Description = Firstboot machine initialization
+ConditionPathExists = !/run/nfs-ro-boot
+ConditionPathIsDirectory = /var/lib/firstboot
+Requires = firstboot.service
+Before = firstboot.service
+
+[Install]
+WantedBy = default.target

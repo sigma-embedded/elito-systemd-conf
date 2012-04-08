@@ -1,0 +1,11 @@
+[Unit]
+Description = opkg firstboot
+ConditionPathExists = !/var/lib/firstboot/opkg
+
+[Service]
+Type = oneshot
+ExecStart = /usr/bin/opkg-cl configure
+ExecStartPost = /bin/touch /var/lib/firstboot/opkg
+
+[Install]
+WantedBy = firstboot.target

@@ -1,0 +1,8 @@
+[Unit]
+Description = Firstboot machine initialization
+ConditionPathExists = !/run/nfs-ro-boot
+ConditionPathIsDirectory = /var/lib/firstboot
+
+[Service]
+Type = oneshot
+ExecStart = /bin/ln -sf /dev/null /etc/systemd/system/firstboot.target
