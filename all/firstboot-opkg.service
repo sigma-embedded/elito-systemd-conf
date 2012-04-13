@@ -1,6 +1,7 @@
 [Unit]
 Description = opkg firstboot
 ConditionPathExists = !/var/lib/firstboot/opkg
+ConditionFileIsExecutable = /usr/bin/opkg-cl
 
 [Service]
 Type = oneshot
