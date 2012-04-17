@@ -5,8 +5,8 @@ Before = dbus.service
 
 [Service]
 Type = oneshot
-ExecStart = /bin/sh -c "test -s /etc/machine-id || rm -f /etc/machine-id"
-ExecStartPost = /bin/touch /var/lib/firstboot/machine-id
+ExecStartPre = /bin/sh -c "test -s /etc/machine-id || rm -f /etc/machine-id"
+ExecStart = /bin/touch /var/lib/firstboot/machine-id
 
 [Install]
 WantedBy = firstboot.target
