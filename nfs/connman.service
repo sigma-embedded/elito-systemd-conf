@@ -1,8 +1,11 @@
-.include /lib/systemd/system/connman.service
+[Unit]
+Description=Connection service
+After=syslog.target
 
-# Stopping 'connman' regularly shutdowns the network which renders NFS
-# unusable. Prevent this by sending a hard KILL signal which bypasses
-# the normal shutdown sequence
 [Service]
-ExecStop = /bin/kill -KILL $MAINPID
-KillSignal = SIGKILL
+Type=dbus
+BusName=net.connman
+ExecStart=@prefix@/sbin/connmand -n -I eth0
+
+[Install]
+WantedBy=multi-user.target
