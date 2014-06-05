@@ -1,0 +1,8 @@
+[Unit]
+Description = /var/lib/systemd bind mount for RO setups
+
+[Mount]
+What = none
+Where = /var/lib/systemd
+Type = tmpfs
+Options = size=512k
