@@ -1,7 +1,7 @@
 ## --*- conf -*--
 [Match]
 Name = @BOOTDEV@
-KernelCommandLine = ip=dhcp
+KernelCommandLine = ip=:::::@BOOTDEV@:
 
 [Network]
 DHCP = both
