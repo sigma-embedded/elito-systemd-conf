@@ -1,0 +1,10 @@
+## --*- conf -*--
+[Match]
+Name = @BOOTDEV@
+KernelCommandLine = ip=dhcp
+
+[Network]
+DHCP = both
+
+[DHCP]
+CriticalConnection = true
