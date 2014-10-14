@@ -8,3 +8,6 @@ DHCP = both
 
 [DHCP]
 CriticalConnection = true
+SendHostname = false
+UseDomains = true
+SendClientId = false
