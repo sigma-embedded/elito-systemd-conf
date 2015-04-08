@@ -6,4 +6,4 @@ Before = pulseaudio.service
 What = none
 Where = /var/lib/pulse
 Type = tmpfs
-Options = size=10m
+Options = size=10m,uid=pulse,gid=pulse,mode=0700
