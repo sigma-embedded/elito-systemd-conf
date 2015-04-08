@@ -1,0 +1,9 @@
+[Unit]
+Description = /var/lib/pulse bind mount for RO setups
+Before = pulseaudio.service
+
+[Mount]
+What = none
+Where = /var/lib/pulse
+Type = tmpfs
+Options = size=10m

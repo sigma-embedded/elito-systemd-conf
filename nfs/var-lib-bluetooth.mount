@@ -1,0 +1,9 @@
+[Unit]
+Description = /var/lib/bluetooth bind mount for RO setups
+Before = bluetooth.service
+
+[Mount]
+What = none
+Where = /var/lib/bluetooth
+Type = tmpfs
+Options = size=10m
